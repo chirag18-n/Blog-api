@@ -24,7 +24,7 @@ const getBlog = async (req, res) => {
 
 const addBlog = async (req, res) => {
   const { title, description, author, isPublished } = req.body;
-  if (!title || !description || !author || !isPublished) {
+  if (!title || !description || !author || isPublished === undefined) {
     res.status(400);
     throw new Error("Please Fill All Details");
   }
