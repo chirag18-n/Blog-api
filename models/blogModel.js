@@ -4,14 +4,14 @@ const blogSchema = new mongoose.Schema(
   {
     title: {
       type: String,
-      requierd: true,
+      required: true,
     },
     description: {
       type: String,
-      requierd: true,
+      required: true,
     },
-    author: { type: String, requierd: true },
-    isPublished: { type: Boolean, requierd: true },
+    author: { type: String, required: true },
+    isPublished: { type: Boolean, required: true },
   },
   {
     timestamps: true,
